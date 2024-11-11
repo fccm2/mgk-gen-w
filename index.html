@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Choose your language for mgk-gen: OCaml binding for Magick-Core">
+    <meta name="generator" content="ChatGPT by OpenAI">
+    <title>Choose Your Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        nav a {
+            margin: 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to mgk-gen</h1>
+    <p>Please choose your language:</p>
+    <nav>
+        <a href="index-en.html">English</a>
+        <a href="index-fr.html">Français</a>
+        <a href="index-zh.html">中文</a>
+        <a href="index-es.html">Español</a>
+        <a href="index-pt.html">Português</a>
+        <a href="index-fa.html">فارسی</a>
+        <a href="index-be.html">Беларуская</a>
+    </nav>
+
+    <script>
+        // Retrieve the user's preferred language
+        const userLang = navigator.language || navigator.userLanguage; 
+        let langPage;
+
+        // Map of languages to corresponding pages
+        const langMap = {
+            'en': 'index-en.html',
+            'fr': 'index-fr.html',
+            'zh': 'index-zh.html',
+            'es': 'index-es.html',
+            'pt': 'index-pt.html',
+            'fa': 'index-fa.html',
+            'be': 'index-be.html'
+        };
+
+        // Extract the language code (first two characters)
+        const langCode = userLang.split('-')[0]; 
+
+        // Check if the language code exists in the langMap
+        if (langMap[langCode]) {
+            langPage = langMap[langCode];
+        } else {
+            langPage = langMap['en']; // Default to English if not found
+        }
+
+        // Pause for 2 seconds before redirecting
+        setTimeout(() => {
+            window.location.href = 'w/' + langPage;
+        }, 2000); // 2000 milliseconds = 2 seconds
+    </script>
+
+</body>
+</html>
